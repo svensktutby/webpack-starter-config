@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Simple webpack config",
   "main": "index.js",
-  "repository": {},
   "keywords": [
     "webpack",
     "es6",
@@ -12,6 +11,11 @@
     "sass",
     "pug"
   ],
+  "author": "Andrew Shved",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/svensktutby/webpack-starter-config.git"
+  },
   "scripts": {
     "start": "webpack-dev-server",
     "build": "NODE_ENV=production webpack --progress",

@@ -1,0 +1,60 @@
+{
+  "name": "webpack-starter-config",
+  "version": "1.0.0",
+  "description": "Simple webpack config",
+  "main": "index.js",
+  "repository": {},
+  "keywords": [
+    "webpack",
+    "es6",
+    "babel",
+    "eslint",
+    "sass",
+    "pug"
+  ],
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "NODE_ENV=production webpack --progress",
+    "serve": "static build",
+    "test:lint": "eslint . --cache",
+    "test:lint:fix": "eslint . --cache --fix"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.0",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
+    "favicons-webpack-plugin": "^2.1.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "node-static": "^0.7.11",
+    "normalize.css": "^8.0.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2",
+    "stylelint": "^12.0.1",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-webpack-plugin": "^1.1.2",
+    "svg-sprite-loader": "^4.1.6",
+    "terser-webpack-plugin": "^2.3.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "jquery": "^3.4.1"
+  }
+}

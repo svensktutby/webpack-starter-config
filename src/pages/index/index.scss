@@ -1,0 +1,22 @@
+@font-face {
+  font-weight: 400;
+  font-family: "robotoregular";
+  font-style: normal;
+
+  src: url("../../fonts/roboto-regular.woff2") format("woff2"), url("../../fonts/roboto-regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "robotobold";
+  font-style: normal;
+
+  src: url("../../fonts/roboto-bold.woff2") format("woff2"), url("../../fonts/roboto-bold.woff") format("woff");
+}
+
+h1 {
+  font-family: "robotoregular", Arial, sans-serif;
+  color: #f00;
+
+  transform: translateX(10px);
+}

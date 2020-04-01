@@ -1,5 +1,5 @@
-const prodMode = process.env.NODE_ENV == 'production';
-module.exports = function() {
+const isProd = process.env.NODE_ENV === 'production';
+module.exports = function () {
   return {
     module: {
       rules: [
@@ -17,21 +17,21 @@ module.exports = function() {
               loader: 'image-webpack-loader',
               options: {
                 mozjpeg: {
-                  enabled: prodMode,
+                  enabled: isProd,
                   progressive: true,
                   quality: 85,
                 },
                 pngquant: {
-                  enabled: prodMode,
+                  enabled: isProd,
                   quality: [0.7, 0.9],
                   speed: 2,
                 },
                 gifsicle: {
-                  enabled: prodMode,
+                  enabled: isProd,
                   interlaced: false,
                 },
                 svgo: {
-                  enabled: prodMode,
+                  enabled: isProd,
                   plugins: [
                     { removeViewBox: false },
                     { cleanupIDs: false },

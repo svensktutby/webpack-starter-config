@@ -1,6 +1,6 @@
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
-module.exports = function() {
+module.exports = function () {
   return {
     plugins: [
       new FaviconsWebpackPlugin({
@@ -13,10 +13,10 @@ module.exports = function() {
           background: '#ddd',
           theme_color: '#333',
           icons: {
-            android: true,
-            appleIcon: true,
+            android: false,
+            appleIcon: false,
             appleStartup: false,
-            coast: true,
+            coast: false,
             favicons: true,
             firefox: false,
             windows: false,

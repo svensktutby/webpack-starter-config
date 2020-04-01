@@ -3,7 +3,7 @@ import 'normalize.css';
 import './index.scss';
 import Menu from '../../components/menu';
 
-let pandaMenu = new Menu({
+const pandaMenu = new Menu({
   title: 'Panda\'s menu',
   items: [{
     text: 'Eggs',
@@ -16,9 +16,6 @@ let pandaMenu = new Menu({
     href: '#bamboo',
   }],
 });
-
 document.querySelector('h1').insertAdjacentElement('afterend', pandaMenu.elem);
-
-
 $('<h2 />').text('Webpack Start').appendTo('body');
 console.log('in index.js');

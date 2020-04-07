@@ -54,13 +54,13 @@ const webpackConfig = merge(
       },
     },
   },
+  babel(),
   pug(),
   images(),
   // spriteSVG(), //does not work properly
   fonts(),
   lintJS(),
   lintCSS(),
-  babel(),
 );
 
 ['index', 'about'].forEach((file) => {

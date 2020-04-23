@@ -1,5 +1,4 @@
-// import '@babel/polyfill';
-import 'normalize.css';
+import '../../components/plugins';
 import './index.scss';
 import Menu from '../../components/menu';
 

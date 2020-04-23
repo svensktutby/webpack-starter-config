@@ -56,7 +56,8 @@ module.exports = function () {
         new OptimizeCSSAssetsPlugin({
           cssProcessorOptions: {
             map: {
-              inline: false, // set to false if you want CSS source maps
+              inline: false,
+              annotation: true,
             },
           },
         }),

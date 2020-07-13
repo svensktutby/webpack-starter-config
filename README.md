@@ -1,5 +1,5 @@
 # webpack-starter-config
-A simple webpack 4 starter configuration with babel, scss, pug and webpack-dev-server.
+Webpack 4 boilerplate starter configuration with babel, scss, pug and webpack-dev-server.
 Js and css will minify in production mode.
 
 ### Installation

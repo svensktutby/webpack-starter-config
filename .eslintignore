@@ -1,6 +1,6 @@
-.git/
-.vscode/
-.idea/
-dist/
-build/
-node_modules/
+/dist/**
+/build/**
+/public/**
+/webpack/**
+/node_modules/**
+!.eslintrc.js

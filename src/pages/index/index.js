@@ -16,5 +16,4 @@ const pandaMenu = new Menu({
   }],
 });
 document.querySelector('h1').insertAdjacentElement('afterend', pandaMenu.elem);
-$('<h2 />').text('Webpack Start').appendTo('body');
 console.log('in index.js');

@@ -33,26 +33,24 @@ const webpackConfig = merge(
     entry: {}, // will add below through forEach
     output: {
       path: PATH.build,
-      filename: './js/[name].js',
+      filename: './js/[name].[hash:8].js',
     },
     performance: {
       hints: NODE_ENV === 'production' ? 'warning' : false,
     },
     plugins: [
       new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
+        // $: 'jquery',
+        // jQuery: 'jquery',
       }),
     ],
     optimization: {
       splitChunks: {
         cacheGroups: {
-          common: {
-            minChunks: 2,
+          commons: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
             chunks: 'all',
-            name: 'common',
-            priority: 10,
-            enforce: true,
           },
         },
       },
@@ -68,7 +66,7 @@ const webpackConfig = merge(
   lintCSS(),
 );
 
-['index', 'about'].forEach((file) => {
+['index'].forEach((file) => {
   webpackConfig.entry[file] = `./pages/${file}/${file}.js`;
 
   webpackConfig.plugins.push(
@@ -76,7 +74,7 @@ const webpackConfig = merge(
       // favicon: './assets/favicon.ico',
       filename: `${file}.html`,
       template: `./pages/${file}/${file}.pug`,
-      chunks: [file.replace(/-(\w)/g, (match, c) => c.toUpperCase()), 'common'],
+      inject: true,
     }),
   );
 });

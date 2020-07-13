@@ -1,15 +1,16 @@
 const isProd = process.env.NODE_ENV === 'production';
-module.exports = function () {
+module.exports = () => {
   return {
     module: {
       rules: [
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
+          exclude: /(\/icons)/,
           use: [
             {
               loader: 'file-loader',
               options: {
-                name: 'img/[path][name].[hash:8].[ext]',
+                name: 'img/[path][name].[ext]',
                 esModule: false,
               },
             },

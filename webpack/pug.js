@@ -1,13 +1,17 @@
-module.exports = function () {
+module.exports = () => {
   return {
     module: {
       rules: [
         {
           test: /\.pug$/,
-          loader: 'pug-loader',
-          options: {
-            pretty: true,
-          },
+          use: [
+            {
+              loader: 'pug-loader',
+              options: {
+                pretty: true,
+              },
+            },
+          ],
         },
       ],
     },

@@ -1,6 +1,6 @@
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
-module.exports = function () {
+module.exports = () => {
   return {
     plugins: [
       new FaviconsWebpackPlugin({

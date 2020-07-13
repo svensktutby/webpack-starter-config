@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
-module.exports = function () {
+module.exports = () => {
   return {
     module: {
       rules: [
@@ -40,6 +40,13 @@ module.exports = function () {
               loader: 'sass-loader',
               options: {
                 sourceMap: true,
+                // prependData: `
+                //   @import "./styles/base/_variables.scss";
+                //   @import "./styles/base/_mixins.scss";
+                // `,
+                sassOptions: {
+                  includePaths: [__dirname, 'src'],
+                },
               },
             },
           ],
@@ -48,17 +55,14 @@ module.exports = function () {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: './css/[name].css',
+        filename: './css/[name].[hash:8].css',
       }),
     ],
     optimization: {
       minimizer: [
         new OptimizeCSSAssetsPlugin({
           cssProcessorOptions: {
-            map: {
-              inline: false,
-              annotation: true,
-            },
+            map: false,
           },
         }),
       ],

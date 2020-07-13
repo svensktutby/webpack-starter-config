@@ -1,6 +1,7 @@
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const isProd = process.env.NODE_ENV === 'production';
 
-module.exports = function () {
+module.exports = () => {
   return {
     module: {
       rules: [
@@ -11,7 +12,7 @@ module.exports = function () {
               loader: 'svg-sprite-loader',
               options: {
                 extract: true,
-                spriteFilename: './img/_sprite.svg',
+                spriteFilename: './img/sprite.svg',
                 symbolId: 'sprite-[name]',
                 runtimeCompat: true,
               },
@@ -20,6 +21,7 @@ module.exports = function () {
               loader: 'image-webpack-loader',
               options: {
                 svgo: {
+                  enabled: isProd,
                   plugins: [
                     { removeViewBox: false },
                     { cleanupIDs: true },

@@ -1,4 +1,4 @@
-module.exports = function () {
+module.exports = () => {
   return {
     devServer: {
       port: 9000,

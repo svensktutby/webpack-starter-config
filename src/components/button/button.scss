@@ -1,0 +1,29 @@
+.btn {
+  width: 200px;
+  height: 50px;
+  margin-right: 5px;
+  padding: 0 25px;
+
+  font-size: 20px;
+  color: $text-color;
+
+  background-color: #20b2aa;
+  background-image: url("../../assets/images/pointer-icon.png");
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
+  background-size: 30px;
+  border: 2px solid currentColor;
+  border-radius: 7px;
+  outline: 0;
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #789;
+  }
+}
+
+.bg {
+  background-color: #90ee90;
+}

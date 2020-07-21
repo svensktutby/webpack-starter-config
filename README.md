@@ -1,5 +1,5 @@
 # webpack-starter-config
-Webpack 4 boilerplate starter configuration with babel, scss, pug and webpack-dev-server.
+Webpack 4 boilerplate starter configuration with babel, scss, and lintig JS and Styles.
 Js and css will minify in production mode.
 
 ### Installation
@@ -25,13 +25,11 @@ npm run build
 * Separated development and production webpack settings you can understand
 * ES6
 * SCSS
-* PUG
 * ESlint
 * Stylelint
 * CSS Vendor prefixing
 * Development server
 * Sourcemaps
-* Favicons generation
 * SVG sprite generation
 * Production optimizations
 

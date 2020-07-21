@@ -1,3 +1,3 @@
-export default {
-  ApiKey: '',
+module.exports = {
+  apiKey: 'https://...',
 };

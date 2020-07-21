@@ -7,8 +7,12 @@
     "node": true
   },
   "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "__ENV__": "readonly",
+    "__DEV__": "readonly",
+    "__PROD__": "readonly",
+    "__API_URI__": "readonly",
+    "$": "readonly",
+    "jQuery": "readonly",
   },
   "parserOptions": {
     "ecmaVersion": 2018,

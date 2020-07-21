@@ -6,8 +6,10 @@ Thumbs.db
 # Project
 .idea
 .vscode/
-*.sublime*
+.netlify/
 build/
+dist/
+environment.js
 
 # NodeJS
 node_modules/

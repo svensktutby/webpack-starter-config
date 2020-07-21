@@ -1,0 +1,1 @@
+export default 'Dynamically loaded';
